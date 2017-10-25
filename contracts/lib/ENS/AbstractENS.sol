@@ -1,5 +1,7 @@
 pragma solidity ^0.4.0;
 
+// Source: https://github.com/ethereum/ens/blob/master/contracts/AbstractENS.sol
+
 contract AbstractENS {
     function owner(bytes32 node) constant returns(address);
     function resolver(bytes32 node) constant returns(address);

@@ -1,5 +1,6 @@
 pragma solidity ^0.4.11;
 
+// Source: https://github.com/OpenZeppelin/zeppelin-solidity/blob/master/contracts/math/SafeMath.sol
 
 /**
  * @title SafeMath

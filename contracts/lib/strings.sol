@@ -33,6 +33,9 @@
  *      `s.splitNew('.')` leaves s unmodified, and returns two values
  *      corresponding to the left and right parts of the string.
  */
+
+// Source: https://github.com/Arachnid/solidity-stringutils/blob/master/strings.sol
+
 library strings {
     struct slice {
         uint _len;

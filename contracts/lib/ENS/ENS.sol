@@ -1,5 +1,7 @@
 pragma solidity ^0.4.0;
 
+// Source: https://github.com/ethereum/ens/blob/master/contracts/ENS.sol
+
 import './AbstractENS.sol';
 
 /**
