@@ -1,6 +1,7 @@
 pragma solidity ^0.4.9;
 
 // Source: https://github.com/Dexaran/ERC223-token-standard/blob/Recommended/ERC223_Token.sol
+// This has been adapted to use SafeMath as a contract library, instead of through inheritance
 
 import "./ERC223_Receiver.sol";
 import "./AbstractERC223.sol";

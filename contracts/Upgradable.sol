@@ -53,14 +53,14 @@ contract Upgradable is Ownable {
     }
 }
 
-contract Wallet {
+contract AbstractWallet {
     event Deposit(address deposit, uint amount);
     event Withdrawal(address withdrawal, uint amount);
     function deposit() public payable;
     function withdrawal() public;
 }
 
-contract SimpleWalllet is Wallet, Upgradable {
+contract SimpleWalllet is AbstractWallet, Upgradable {
     mapping (address => uint) public balances;
     // What will happen to the state of the new contract???
 
@@ -83,7 +83,7 @@ contract SimpleWalllet is Wallet, Upgradable {
     }
 }
 
-contract UpgradedWallet is Wallet, Upgradable {
+contract UpgradedWallet is AbstractWallet, Upgradable {
     mapping (address => uint) public balances;
     SimpleWalllet simplewallet;
 
