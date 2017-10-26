@@ -25,6 +25,8 @@ import "./TokenCreation.sol";
 
 pragma solidity ^0.4.4;
 
+// Source: https://github.com/slockit/DAO/blob/develop/DAO.sol
+
 contract DAOInterface {
     // The minimum debate period that a generic proposal can have
     uint constant minProposalDebatePeriod = 2 weeks;

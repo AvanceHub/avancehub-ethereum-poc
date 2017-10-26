@@ -1,12 +1,8 @@
 pragma solidity ^0.4.15;
 
-/*import 'https://github.com/OpenZeppelin/zeppelin-solidity/contracts/ownership/Ownable.sol';*/
-/*import 'https://github.com/ethereum/ens/contracts/ENS.sol';
-import 'https://github.com/ethereum/ens/contracts/PublicResolver.sol';*/
-
 import './lib/Ownable.sol';
-import './lib/ENS.sol';
-import './lib/PublicResolver.sol';
+import './lib/ENS/ENS.sol';
+import './lib/ENS/PublicResolver.sol';
 
 /**
  * @title Upgradable

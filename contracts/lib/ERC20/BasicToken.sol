@@ -3,7 +3,7 @@ pragma solidity ^0.4.11;
 // Source: https://github.com/OpenZeppelin/zeppelin-solidity/blob/master/contracts/token/BasicToken.sol
 
 import './ERC20Basic.sol';
-import '../math/SafeMath.sol';
+import '../SafeMath.sol';
 
 
 /**
