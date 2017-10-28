@@ -21,8 +21,22 @@ contract AbstractAvanceManager is DAO {
    * @param _token Token contract to be used for voting
    */
   function AvanceProject(address _curator, uint _proposalDeposit, Token _token) public;
+
+  /**
+   * @dev Grants rewards in the form of AvanceTokens to a contributor for assets or developmen contributions
+   *
+   * @param beneficiary The user to be rewarded
+   */
+  function rewardContribution(address beneficiary) public;
+
+  /**
+   * @dev Grants rewards in the form of AvanceTokens to a contributor for assets or developmen contributions
+   *
+   * @param beneficiary The user to be rewarded
+   */
+  function projectTokenAuction(bytes32 projectID) public;
 }
 
 contract AvanceManager is AbstractAvanceManager {
-  
+
 }

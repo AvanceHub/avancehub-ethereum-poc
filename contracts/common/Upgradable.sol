@@ -1,8 +1,8 @@
 pragma solidity ^0.4.15;
 
-import './lib/Ownable.sol';
-import './lib/ENS/ENS.sol';
-import './lib/ENS/PublicResolver.sol';
+import '../lib/Ownable.sol'; // TODO: Change this to use ENSOwnable.sol
+import '../lib/ENS/ENS.sol';
+import '../lib/ENS/PublicResolver.sol';
 
 /**
  * @title Upgradable

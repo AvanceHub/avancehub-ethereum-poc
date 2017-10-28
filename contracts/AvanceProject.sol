@@ -2,6 +2,8 @@ pragma solidity ^0.4.15;
 
 import './lib/SlockitDAO/DAO.sol';
 import './AvanceManager.sol';
+import './AvanceAsset.sol';
+import './AvanceJob.sol';
 
 /**
  * @title AvanceProject
@@ -12,6 +14,8 @@ import './AvanceManager.sol';
  */
 contract AbstractAvanceProject is DAO {
   AvanceManager public avanceManager;
+  mapping (bytes32 => AvanceAsset) assets;
+  mapping (bytes32 => AvanceJob) jobs;
 
   /**
    * @dev Constructs a new Registrar, with the provided address as the owner of the root node.
@@ -27,7 +31,14 @@ contract AbstractAvanceProject is DAO {
    *
    * @param ...
    */
-  function submitDispute() onlyTokenholders public;
+  function submitDisputeToAvanceManager() onlyTokenholders public;
+
+  /**
+   * @dev Gets the address of the Avancehub Marketplace token, from the AvanceCore contract
+   *
+   * @returns address - The address of the Avancehub token
+   */
+  function getAvanceToken() internal returns (address);
 }
 
 contract AvanceProject is AbstractAvanceProject {

@@ -15,9 +15,20 @@ contract AbstractAvanceCore is Ownable {
 
   struct Project {
     AvanceProject avanceProject;
+    mapping (bytes32 => Dispute) disputes;
+    mapping (bytes32 => ProjectAuction) projectAuctions;
   }
 
-  mapping (address => Project) public projects;
+  struct Dispute {
+
+  }
+
+  struct ProjectAuction {
+
+  }
+
+  mapping (bytes32 => Project) public projects;
+  mapping (address => bool) public judges;
 
   /**
    * @dev Sets a project
@@ -25,7 +36,7 @@ contract AbstractAvanceCore is Ownable {
    * @param ...
    * @return True if successfully changed
    */
-  function setProject() onlyOwner internal returns (bool);
+  function setProject(bytes32 projectID) onlyOwner internal returns (bool);
 }
 
 contract AvanceCore is AbstractAvanceCore {
